@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UITableViewController {
     
+    var checked : [Bool]=[false,false,false,false,false,false,false,false]
+    
     var shapes : [Manner] = [
         Manner(color: UIColor.redColor(), name: "Greeting People", imgName: "img1", details : "Greet people with a handshake, and smile at them when you do so! Make sure to say hello.", seen:  false),
         Manner(color: UIColor.blueColor(), name: "Knocking on the Door", imgName: "img2", details: "Knock on the door before you enter someone elses house. It is polite to do so!", seen:  false),
@@ -21,32 +23,44 @@ class ViewController: UITableViewController {
         Manner(color: UIColor.magentaColor(), name: "Writing Thank-You Notes", imgName: "img8", details: "Make sure to always right a thank you note every time someone gives you a gift. It shows good manners.", seen:  false)
     ]
     
+    @IBAction func onSettingsClicked(sender: UIBarButtonItem)
+    {
+        let navVC = self.storyboard!.instantiateViewControllerWithIdentifier("setting_view") as! UINavigationController
+        
+        //let settingsVC = navVC.viewControllers[0] as! SettingsViewController
+        self.presentViewController(navVC, animated: true, completion: nil)
+    }
+    //var defaults : NSUserDefaults
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
+        //defaults = NSUserDefaults.standardUserDefaults()
         let cellNib = UINib(nibName: "ShapeTableViewCell", bundle: nil)
         self.tableView.registerNib(cellNib, forCellReuseIdentifier: "shape_cell")
     }
-
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.shapes.count
-    }
-
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> ShapeTableViewCell
+    {
         let manner = self.shapes[indexPath.row]
         
         let cell = tableView.dequeueReusableCellWithIdentifier("shape_cell") as! ShapeTableViewCell
         cell.initWithShape(manner)
         cell.doCheckMark(manner)
         
+        //configure you cell here.
+        if !checked[indexPath.row] {
+            cell.accessoryType = .None
+        } else if checked[indexPath.row] {
+            cell.accessoryType = .Checkmark
+        }
+        
+        
         return cell
-        
     }
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    {
         let manner = self.shapes[indexPath.row]
         
         tableView.deselectRowAtIndexPath(indexPath, animated: false)
@@ -62,6 +76,35 @@ class ViewController: UITableViewController {
         detailVC.cel = cell
         
         self.presentViewController(navVC, animated: true, completion: nil)
+        
+        if let cell = tableView.cellForRowAtIndexPath(indexPath)
+        {
+            if cell.accessoryType == .Checkmark
+            {
+                cell.accessoryType = .None
+                checked[indexPath.row] = false
+            }
+            else
+            {
+                cell.accessoryType = .Checkmark
+                checked[indexPath.row] = true
+            }
+        }    
+    }
+
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.shapes.count
+    }
+    
+    //to reset all the check marks
+    private func resetChecks() {
+        for i in 0...tableView.numberOfSections-1 {
+            for j in 0...tableView.numberOfRowsInSection(i) - 1 {
+                if let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: j, inSection: i)) {
+                    cell.accessoryType = .None
+                }
+            }
+        }
     }
 }
 

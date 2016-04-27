@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ShapeDetails/ViewController.swift"
-            timestampString = "482457202.519153"
+            timestampString = "483484517.388006"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
             landmarkName = "shapes"
             landmarkType = "19">
             <Locations>
@@ -47,6 +47,84 @@
                   startingLineNumber = "15"
                   endingLineNumber = "15"
                   offsetFromSymbolStart = "493">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ShapeDetails/SettingsViewController.swift"
+            timestampString = "483487412.936234"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "SettingsViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "corri108Assignment4.SettingsViewController.emailString.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UITextField&gt;"
+                  moduleName = "corri108Assignment4"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/corri108/Desktop/corri108_assignment5/learn-your-manners-corri108/ShapeDetails/SettingsViewController.swift"
+                  timestampString = "483487413.942483"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "corri108Assignment4.SettingsViewController.emailString.materializeForSet : weak Swift.ImplicitlyUnwrappedOptional&lt;__ObjC.UITextField&gt;"
+                  moduleName = "corri108Assignment4"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/corri108/Desktop/corri108_assignment5/learn-your-manners-corri108/ShapeDetails/SettingsViewController.swift"
+                  timestampString = "483487413.942608"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "corri108Assignment4.SettingsViewController.init (corri108Assignment4.SettingsViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; corri108Assignment4.SettingsViewController"
+                  moduleName = "corri108Assignment4"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/corri108/Desktop/corri108_assignment5/learn-your-manners-corri108/ShapeDetails/SettingsViewController.swift"
+                  timestampString = "483487413.942726"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "70">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "corri108Assignment4.SettingsViewController.init (corri108Assignment4.SettingsViewController.Type)(coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;corri108Assignment4.SettingsViewController&gt;"
+                  moduleName = "corri108Assignment4"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/corri108/Desktop/corri108_assignment5/learn-your-manners-corri108/ShapeDetails/SettingsViewController.swift"
+                  timestampString = "483487413.942843"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "28">
                </Location>
             </Locations>
          </BreakpointContent>

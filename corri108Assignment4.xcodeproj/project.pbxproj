@@ -25,7 +25,11 @@
 		D707EEE51CC45E51007FEFCD /* img7.png in Resources */ = {isa = PBXBuildFile; fileRef = D707EEDD1CC45E51007FEFCD /* img7.png */; };
 		D707EEE61CC45E51007FEFCD /* img8.png in Resources */ = {isa = PBXBuildFile; fileRef = D707EEDE1CC45E51007FEFCD /* img8.png */; };
 		D707EEE81CC45E86007FEFCD /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = D707EEE71CC45E86007FEFCD /* check.png */; };
+		D75D61D61CD1622E00A3AD3C /* settingsImg.png in Resources */ = {isa = PBXBuildFile; fileRef = D75D61D51CD1622E00A3AD3C /* settingsImg.png */; };
+		D75D61D81CD16B5E00A3AD3C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75D61D71CD16B5E00A3AD3C /* SettingsViewController.swift */; };
+		D75D61DA1CD173DA00A3AD3C /* NSDefaultExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D75D61D91CD173DA00A3AD3C /* NSDefaultExtensions.swift */; };
 		D760A7891CC18E9C00FCE1F2 /* Manner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D760A7881CC18E9C00FCE1F2 /* Manner.swift */; };
+		D79155471CD15E18007779C1 /* redBG.png in Resources */ = {isa = PBXBuildFile; fileRef = D79155461CD15E18007779C1 /* redBG.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,7 +53,11 @@
 		D707EEDD1CC45E51007FEFCD /* img7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img7.png; sourceTree = "<group>"; };
 		D707EEDE1CC45E51007FEFCD /* img8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img8.png; sourceTree = "<group>"; };
 		D707EEE71CC45E86007FEFCD /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = check.png; path = ../check.png; sourceTree = "<group>"; };
+		D75D61D51CD1622E00A3AD3C /* settingsImg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settingsImg.png; path = ../../../settingsImg.png; sourceTree = "<group>"; };
+		D75D61D71CD16B5E00A3AD3C /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		D75D61D91CD173DA00A3AD3C /* NSDefaultExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDefaultExtensions.swift; sourceTree = "<group>"; };
 		D760A7881CC18E9C00FCE1F2 /* Manner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Manner.swift; sourceTree = "<group>"; };
+		D79155461CD15E18007779C1 /* redBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = redBG.png; path = ../../../redBG.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,15 +92,19 @@
 			children = (
 				1DD0003A1CBC907D0003E6B4 /* AppDelegate.swift */,
 				1DD0003C1CBC907D0003E6B4 /* ViewController.swift */,
+				1DD0004C1CBC90C50003E6B4 /* MannerP.swift */,
+				1DD000521CBC99060003E6B4 /* ShapeDetailViewController.swift */,
+				D760A7881CC18E9C00FCE1F2 /* Manner.swift */,
+				D75D61D71CD16B5E00A3AD3C /* SettingsViewController.swift */,
+				D75D61D91CD173DA00A3AD3C /* NSDefaultExtensions.swift */,
 				1DD0003E1CBC907D0003E6B4 /* Main.storyboard */,
+				D75D61D51CD1622E00A3AD3C /* settingsImg.png */,
 				1DD000411CBC907D0003E6B4 /* Assets.xcassets */,
 				1DD000431CBC907D0003E6B4 /* LaunchScreen.storyboard */,
 				1DD000461CBC907D0003E6B4 /* Info.plist */,
-				1DD0004C1CBC90C50003E6B4 /* MannerP.swift */,
-				1DD000521CBC99060003E6B4 /* ShapeDetailViewController.swift */,
 				1D6BEDEB1CBF3AB300C2AE54 /* ShapeTableViewCell.swift */,
 				1D6BEDEC1CBF3AB300C2AE54 /* ShapeTableViewCell.xib */,
-				D760A7881CC18E9C00FCE1F2 /* Manner.swift */,
+				D79155461CD15E18007779C1 /* redBG.png */,
 				D707EED71CC45E51007FEFCD /* img1.png */,
 				D707EED81CC45E51007FEFCD /* img2.png */,
 				D707EED91CC45E51007FEFCD /* img3.png */,
@@ -169,10 +181,12 @@
 				D707EEE81CC45E86007FEFCD /* check.png in Resources */,
 				1DD000451CBC907D0003E6B4 /* LaunchScreen.storyboard in Resources */,
 				D707EEE21CC45E51007FEFCD /* img4.png in Resources */,
+				D79155471CD15E18007779C1 /* redBG.png in Resources */,
 				D707EEE41CC45E51007FEFCD /* img6.png in Resources */,
 				1DD000421CBC907D0003E6B4 /* Assets.xcassets in Resources */,
 				D707EEE11CC45E51007FEFCD /* img3.png in Resources */,
 				D707EEE51CC45E51007FEFCD /* img7.png in Resources */,
+				D75D61D61CD1622E00A3AD3C /* settingsImg.png in Resources */,
 				D707EEDF1CC45E51007FEFCD /* img1.png in Resources */,
 				D707EEE31CC45E51007FEFCD /* img5.png in Resources */,
 				D707EEE61CC45E51007FEFCD /* img8.png in Resources */,
@@ -190,6 +204,8 @@
 			files = (
 				1DD0003D1CBC907D0003E6B4 /* ViewController.swift in Sources */,
 				1DD000531CBC99060003E6B4 /* ShapeDetailViewController.swift in Sources */,
+				D75D61DA1CD173DA00A3AD3C /* NSDefaultExtensions.swift in Sources */,
+				D75D61D81CD16B5E00A3AD3C /* SettingsViewController.swift in Sources */,
 				1DD0004D1CBC90C50003E6B4 /* MannerP.swift in Sources */,
 				D760A7891CC18E9C00FCE1F2 /* Manner.swift in Sources */,
 				1DD0003B1CBC907D0003E6B4 /* AppDelegate.swift in Sources */,
