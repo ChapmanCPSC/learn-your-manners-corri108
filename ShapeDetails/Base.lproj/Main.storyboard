@@ -17,7 +17,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <items>
-                                <navigationItem title="Title" id="gIE-SL-TRb">
+                                <navigationItem id="gIE-SL-TRb">
                                     <barButtonItem key="rightBarButtonItem" width="25" style="plain" systemItem="fastForward" id="LCy-v9-gvR">
                                         <inset key="imageInsets" minX="0.0" minY="7" maxX="8" maxY="0.0"/>
                                         <color key="tintColor" red="0.0" green="1" blue="0.870132032" alpha="1" colorSpace="calibratedRGB"/>
@@ -36,6 +36,9 @@
                                 <color key="titleColor" red="0.0" green="1" blue="0.87013203202969258" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="onSummaryClicked:" destination="h8u-GZ-hBU" eventType="touchUpInside" id="owe-Zc-tXK"/>
+                            </connections>
                         </button>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="40" id="edG-r4-xjg">
@@ -54,6 +57,9 @@
                     </tableView>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="titleBar" destination="gIE-SL-TRb" id="p2o-hf-WbC"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YpJ-Hn-13R" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Lti-K2-eU9">
@@ -140,24 +146,21 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UOQ-WZ-esB">
-                                <rect key="frame" x="177" y="179" width="247" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tdo-BU-RUZ">
+                                <rect key="frame" x="190" y="200" width="221" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="247" id="g2x-sI-iZ8"/>
+                                    <constraint firstAttribute="width" constant="221" id="ew6-PI-6SN"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <action selector="onTextChanged:" destination="6d2-c0-bgg" eventType="editingChanged" id="2Kq-fv-0iX"/>
-                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="UOQ-WZ-esB" firstAttribute="centerX" secondItem="c24-dH-iAC" secondAttribute="centerX" id="MKM-hA-w4L"/>
-                            <constraint firstItem="UOQ-WZ-esB" firstAttribute="top" secondItem="c24-dH-iAC" secondAttribute="bottom" constant="39" id="V22-c5-PAU"/>
-                            <constraint firstItem="UOQ-WZ-esB" firstAttribute="centerX" secondItem="dOT-jO-TOr" secondAttribute="centerX" id="fcZ-6V-Uom"/>
-                            <constraint firstItem="sel-ib-m2D" firstAttribute="top" secondItem="UOQ-WZ-esB" secondAttribute="bottom" constant="391" id="gYN-t1-7TC"/>
+                            <constraint firstItem="tdo-BU-RUZ" firstAttribute="top" secondItem="c24-dH-iAC" secondAttribute="bottom" constant="60" id="2Hd-ic-P1J"/>
+                            <constraint firstItem="sel-ib-m2D" firstAttribute="top" secondItem="tdo-BU-RUZ" secondAttribute="bottom" constant="370" id="44q-8x-vpm"/>
+                            <constraint firstItem="tdo-BU-RUZ" firstAttribute="centerX" secondItem="dOT-jO-TOr" secondAttribute="centerX" id="8FR-fB-mu1"/>
+                            <constraint firstItem="tdo-BU-RUZ" firstAttribute="centerX" secondItem="c24-dH-iAC" secondAttribute="centerX" id="nd5-Fh-yV4"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7Q1-DJ-YUX">
@@ -168,7 +171,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="emailString" destination="UOQ-WZ-esB" id="rvi-Ih-cKD"/>
+                        <outlet property="emailString" destination="tdo-BU-RUZ" id="z8Q-mY-VJx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fsr-IQ-F9f" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import MessageUI
 
-class ViewController: UITableViewController {
+class ViewController: UITableViewController, MFMailComposeViewControllerDelegate {
+    
+    @IBOutlet weak var titleBar: UINavigationItem!
     
     var checked : [Bool]=[false,false,false,false,false,false,false,false]
     
@@ -59,6 +62,28 @@ class ViewController: UITableViewController {
         return cell
     }
     
+    @IBAction func onSummaryClicked(sender: UIButton)
+    {
+        let myOutput = NSUserDefaults.standardUserDefaults().objectForKey("Username")
+        
+        if(myOutput != nil)
+        {
+            if (myOutput as? String != nil && myOutput as? String != "")
+            {
+                let emailAdd = (myOutput) as! String
+                sendEmail(emailAdd)
+            }
+            else
+            {
+                titleBar.title = "No email address exists to send!"
+            }
+        }
+        else
+        {
+            titleBar.title = "No email address exists to send!"
+        }
+    }
+    
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
         let manner = self.shapes[indexPath.row]
@@ -105,6 +130,77 @@ class ViewController: UITableViewController {
                 }
             }
         }
+    }
+    
+    //to send an email
+    func sendEmail(let email : String)
+    {
+        var body : String = ""
+        
+        if(checked[0])
+        {
+            body += "I learned how to greet people!\n"
+        }
+        if(checked[1])
+        {
+            body += "I learned how to knock on the door!\n"
+        }
+        if(checked[2])
+        {
+            body += "I learned how to be a good guest!\n"
+        }
+        if(checked[3])
+        {
+            body += "I learned how to be a good host!\n"
+        }
+        if(checked[4])
+        {
+            body += "I learned how to finish my food!\n"
+        }
+        if(checked[5])
+        {
+            body += "I learned how to keep my elbows off the table!\n"
+        }
+        if(checked[6])
+        {
+            body += "I learned how to act when I recieve gifts!\n"
+        }
+        if(checked[7])
+        {
+            body += "I learned how to write thank-you notes!\n"
+        }
+        
+        print(body)
+        
+        if MFMailComposeViewController.canSendMail()
+        {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            mail.setToRecipients([email])
+            mail.setMessageBody("<p>My Manners Summary!</p>\n" + body, isHTML: true)
+            
+            presentViewController(mail, animated: true, completion: nil)
+        }
+        else
+        {
+            // bad news bears
+        }
+    }
+    
+    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?)
+    {
+        let mailAddress = NSUserDefaults.standardUserDefaults().objectForKey("Username")
+        
+        if(mailAddress != nil)
+        {
+            if (mailAddress as? String != nil && mailAddress as? String != "")
+            {
+                let emailAdd = (mailAddress) as! String
+                titleBar.title = "Sent email to: " + emailAdd
+            }
+        }
+        
+        controller.dismissViewControllerAnimated(true, completion: nil)
     }
 }
 

@@ -11,22 +11,26 @@ import UIKit
 class SettingsViewController: UIViewController {
     
     @IBOutlet weak var emailString: UITextField!
-    
-    @IBAction func onTextChanged(sender: AnyObject)
-    {
-        let defaults = NSUserDefaults.standardUserDefaults()
-        defaults.setString("user_email", forKey: emailString.text!)
-        print(emailString.text!)
-    }
+    var defaults : NSUserDefaults = NSUserDefaults.standardUserDefaults()
     
     override func viewDidLoad()
     {
-        let loadedUserName = NSUserDefaults.standardUserDefaults().stringForKey("user_email") ?? ""
-        emailString.text = loadedUserName
-        print(loadedUserName)
+        let myOutput = NSUserDefaults.standardUserDefaults().objectForKey("Username")
+        
+        if(myOutput != nil)
+        {
+            if (myOutput as? String != nil)
+            {
+                emailString.text = (myOutput) as! String
+            }
+        }
+        
+        print(myOutput)
         super.viewDidLoad()
     }
     
+    @IBAction func onEditChanged(sender: UITextField) {
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -34,9 +38,14 @@ class SettingsViewController: UIViewController {
     
     @IBAction func onBackClicked(sender: AnyObject)
     {
-        let defaults = NSUserDefaults.standardUserDefaults()
-        defaults.setString("user_email", forKey: emailString.text!)
-        print(emailString.text!)
+        var myValue : NSString = emailString.text!
+        
+        NSUserDefaults.standardUserDefaults().setObject(myValue, forKey:"Username")
+        NSUserDefaults.standardUserDefaults().synchronize()
+        
+        //defaults.setString("user_email", forKey: emailString.text!)
+        //defaults.synchronize()
+        // coprint(emailString.text!)
         self.dismissViewControllerAnimated(true, completion: nil)
     }
 }
